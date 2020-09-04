@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PUMA HIND</title>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="assets/js/objSet.js"></script>
+    <script src="assets/js/admin/adminFirebase.js"></script>
+    <script src="assets/js/customer/userFirebase.js"></script>
+    <script src="assets/js/utilities.js"></script>
+    <script src="assets/js/controller.js"></script>
+    <!-- <script src="assets/js/admin/adminController.js"></script> -->
+    <link rel="icon" href="https://d21kp9itql721v.cloudfront.net/cdn/762218/media/favicon/default/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/fontawesome-all.min.css">
+</head>
+<body>
+    <div id="container">
+
+
+        <div class="blur"></div>
+        <div id="signUp">
+            <div class="popUp">
+                <h2 id="signUpHead">New User? Sign Up</h2>
+                <span id="cross">&#10006;</span>
+                <div class="signOption">
+                    <div id="adminSignUp" class="ctdsign">admin</div>
+                    <div id="userSignUp" class="ctdsign">user</div>
+                </div>
+                <form id="signUpForm">
+                    <input type="text" class="name" placeholder="Enter admin name" id="adminfName" autocomplete="off">
+                    <input type="email" class="name" placeholder="Enter email" id="adminEmail"  autocomplete="off">
+                    <input type="password" placeholder="enter password" id="adminPass">
+                    <input type="password" placeholder="confirm password" id="adminPassConf">
+                    <button class="submit" id="adminSubmit" type="button">SignUp as ADMIN</button>
+                </form>
+                <form id="signUpForm2">
+                    <input type="text" class="name" placeholder="Enter user name" id="userfName" autocomplete="off">
+                    <input type="email" class="name" placeholder="Enter email" id="userEmail" autocomplete="off">
+                    <input type="password" placeholder="enter password" id="userPass">
+                    <input type="password" placeholder="confirm password" id="userPassConf">
+                    <input type="date" placeholder="Date of Birth" id="userDOB">
+                    <input type="text" placeholder="address" id="userAddress">
+                    <button class="submit" id="userSubmit" type="button">Sign Up</button>
+                </form>
+                <div id="logOption" class="toggleUpIn">Login</div>
+                <form id="LogIn">
+                    <h2>Login to your account</h2>
+                    <input type="email" class="name" placeholder="Enter email" id="loginEmail" autocomplete="off">
+                    <input type="password" placeholder="enter password" id="loginPass">
+                    <button class="submit" id="loginSubmit" type="button">Login</button>
+                </form>
+                <div id="signOption" class="toggleUpIn">SignUp</div>
+            </div>
+        </div>
+        <!-- <div id="topHead">
+            <ul class="tophead">
+                <li><a href="#" id="signUpClick">Email Sign Up</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Find a store</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">India</a></li>
+            </ul>
+        </div> -->
+
+
+        <div id="categoryHead">
+            <div class="leftHead">
+                <div id="logo">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div id="categories">
+                    <ul class="category">
+                        <li id="catMen">MEN
+                            <ul class="childUL">
+                                <li class="childLI">Clothing</li>
+                                <li class="childLI">Footwear</li>
+                                <li class="childLI">Watches</li>
+                            </ul>
+                        </li>
+                        <li id="catWomen">WOMEN</a></li>
+                        <li id="catKid">KIDS</a></li>
+                        <li id="catSports">SPORTS</li>
+                        <li id="catElectronics">ELECTRONICS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightHead">
+                <div class="cart">
+                    <ul class="rightMaster">
+                        <li id="signUpClick">LogIn | SignUp</li>
+                        <li id="userAccount">Account</li>
+                        <li id="userCart">Cart</li>
+                        <!-- <li id="logOut">Logout</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="slider">
+            <div class="sliderImages">
+                <span id="leftButton">&#12296;</span>
+                <span id="rightButton">&#12297;</span>
+                <img src="assets/media/summerSale.png" alt="banner" class="banner-image">
+                <img src="assets/media/sale.png" alt="banner" class="banner-image">
+                <!-- <img src="assets/media/autumnSale.png" alt="banner" class="banner-image"> -->
+                <!-- <img src="assets/media/winterSale.png" alt="banner2" class="banner-image"> -->
+            </div>    
+        </div>
+
+
+        <div id="featured">
+            <h2 id="featuredHead">New in our store</h2>
+            <div id="newItems"></div>           
+        </div>
+        
+        <div id="celebad"></div>
+        <div id="footer"></div>
+
+    
+    </div>
+</body>
+</html>

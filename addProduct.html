@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="assets/js/admin/adminController.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="assets/js/objSet.js"></script>
+    <script src="assets/js/admin/adminFirebase.js"></script>
+    <script src="assets/js/product/productFirebase.js"></script>
+    <script src="assets/js/product/productController.js"></script>
+    <!-- <script src="assets/js/customer/userFirebase.js"></script> -->
+    <script src="assets/js/utilities.js"></script>
+    <!-- <script src="assets/js/controller.js"></script> -->
+    <!-- <script src="assets/js/customer/userController.js"></script> -->
+    <link rel="icon" href="https://d21kp9itql721v.cloudfront.net/cdn/762218/media/favicon/default/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/fontawesome-all.min.css">
+</head>
+<body>
+    <div id="adminContainer">
+        <div id="topHead">
+            <ul class="tophead">
+                <li><a href="#" id="signUpClick">Email Sign Up</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Find a store</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">India</a></li>
+            </ul>
+        </div>
+
+
+        <div id="categoryHead">
+            <div class="leftHead">
+                <div id="logo">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div id="categories">
+                    <ul class="category">
+                        <li id="catMen">MEN</li>
+                        <li id="catWomen">WOMEN</a></li>
+                        <li id="catKid">KIDS</a></li>
+                        <li id="catSports">SPORTS</li>
+                        <li id="catColl">COLLECTIONS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightHead">
+                <div class="cart">
+                    <ul class="rightMaster">
+                        <li id="signUpClick">LogIn | SignUp</li>
+                        <li>Account</li>
+                        <li>Cart</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="productData">
+            <div class="productDetails">
+                <h2 id="infoHead">Hello <span id="adminName"></span><br> Please provide the details of the product ...</h2>
+                <form id="productInfo">
+                    <span class="productTag">Product name</span>
+                    <input type="text" placeholder="e.g vaccum cleaner" id="productName">
+                    
+                    <span class="productTag">Product category</span>
+                    <select name="type" id="productType">
+                        <option value="default" selected>PRODUCT TYPE</option>
+                        <option value="men">MEN</option>
+                        <option value="women">WOMEN</option>
+                        <option value="electronics">ELECTRONIC</option>
+                        <option value="kids">KIDS</option>
+                        <option value="sports">SPORTS</option>
+                    </select><br>
+                    
+                    <span class="productTag">Product price</span>
+                    <input type="text" placeholder="e.g ₹5,000" id="productPrice">
+                    
+                    <span class="productTag">Any discount</span>
+                    <input type="number" placeholder="e.g 5%,6%" id="productDiscount">
+
+                    <span class="productTag" required>Product image url</span>
+                    <input type="url" placeholder="e.g http://image.com" id="productURL">
+                    
+                    <button id="addNewProduct" type="button" class="submit">Save</button>
+                    <button id="reset" type="button">Add Another</button>
+                    <button id="nextPage" type="button">Home</button>                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
