@@ -1,0 +1,568 @@
+/* <------------------------------------------------ index.html ------------------------------------------------------> */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    margin : 0;
+    padding : 0;
+    background-color: #F1F3F6;
+    font-family: consolas,  "Helvetica Neue",Helvetica,sans-serif;
+}
+
+.filterBlur {
+    filter: blur(2px);
+}
+
+
+
+ul {
+    list-style : none;
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#signUp {
+    position: absolute;
+    top: 10%;
+    z-index: 102;
+    left: 35%;
+    animation-duration: 1s;
+    display: none;
+    animation-name: popup;
+}
+
+#cross {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+@keyframes popup {
+    from {
+        transform: translate(0px, -650px);
+    }
+    to {
+        transform: translate(0px, 0px)
+    }
+}
+
+@keyframes popdown {
+    from {
+        transform: translate(0px, 0px)
+    }
+    to {
+        transform: translate(0px, -500px);
+    }
+}
+
+.blur {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    filter: blur(600px);
+    z-index: 101;
+    height: 780px;
+    position: absolute;
+    display: none;
+}
+
+.popUp {
+    border-radius: 10px;
+    width: 500px;
+    padding: 3% 3%;
+    background-color: rgba(255, 255, 255,0.9);
+}
+
+.popUp h2 {
+    margin-left: 10%;
+    margin-bottom: 2%;
+    margin-top: 0;
+}
+
+.signOption {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+#adminSignUp, #userSignUp {
+    width: 49%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5%;
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: -5px;
+}
+
+#adminSignUp:hover, #userSignUp:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+    color: #fff;
+}
+
+#signUpForm {
+    transition: 2s all ease;
+    display: none;
+    animation-name: popup;
+}
+
+#signUpForm2 {
+    transition: 2s all ease;
+    display: none;
+    animation-name: popup;
+}
+
+#signUpForm2 input[type="password"] {
+    width: 38%;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+#LogIn {
+    transform: 2s all ease; 
+    display: none;
+}
+
+#logOption {
+    display: block;
+}
+
+#signOption {
+    display: none;
+}
+
+.toggleUpIn {
+    cursor: pointer;
+    margin-top: 10%;
+    margin-left: 88%;
+}
+
+.toggleUpIn:hover {
+    color: #DF5050;
+}
+
+#userPass {
+    margin-left: 48px;
+}
+
+.popUp input {
+    transition: all  ease 0s; 
+    display: block;
+    margin: 5% auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid #000;
+    padding-left: 2%;
+    font-size: 15px;
+}
+
+.popUp input:focus {
+    outline: none;
+    border: 2px solid rgba(255, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.popUp button {
+    margin: auto;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.6);
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popUp button:focus {
+    outline: none;
+}
+
+.popUp button:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+#topHead {
+    width: 100%;
+    padding: 15px 0px;
+    background-color: #EAEAEA;
+    border-bottom: 2px solid #DEDEDE;
+}
+
+.tophead {
+    margin: 0% 10% 0% 55%;
+}
+
+.tophead a {
+    color: #000;
+}
+
+.tophead a:hover {
+    color: #FF0000;
+}
+
+.tophead li {
+    font-size: 14px;
+    display: inline-block;
+    border-right: 1px solid black;
+    padding: 0% 2%;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.tophead li:last-child {
+    border: none;
+}
+
+#categoryHead {
+    position: fixed;
+    top: 0;
+    box-shadow: 5px 2px 8px rgba(255, 255, 255,0.4);
+    width: 100%;
+    border-bottom: 2px solid #fff;
+    z-index: 100;
+    background-color: #DF5050;
+}
+
+.leftHead, .rightHead {
+    width: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    left: 95%;
+    top: 5px;
+    /* color: #FCE824; */
+    color: #fff;
+    font-size: 45px;
+    transform: rotateZ(-10deg);
+}
+
+.category {
+    margin-left: 0;
+}
+
+.category li {
+    font-family: sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: all 0.2s ease 0s;
+    padding: 20px 10px;
+    margin-left: -5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.category li:hover {
+    color: #DF5050;
+    background-color: #fff;
+}
+
+#catMen:hover .childUL {
+    display: block;
+}
+
+#catWomen:hover .childUL {
+    display: block;
+}
+
+#catKid:hover .childUL {
+    display: block;
+}
+
+#catSports:hover .childUL {
+    display: block;
+}
+
+#catElectronics:hover .childUL {
+    display: block;
+}
+
+.rightHead {
+    top: 10px;
+    float: right;
+    width: 24%;
+}
+
+.rightMaster li {
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #fff;
+    font-weight: 600;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+#slider {
+    width: 100%;
+    margin-top: 60px;
+    position: relative;
+}
+
+.sliderImages {
+    width: 200%;
+    vertical-align: top;
+    transition: 2s;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(200);
+    }
+}
+
+#leftButton {
+    position: absolute;
+    left: -50px;
+    top: 200px;
+    color: #fff;
+    width: 50px;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+#rightButton {
+    color: #fff;
+    width: 50px;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    cursor: pointer;
+    font-size: 100px;
+
+}
+
+
+.sliderImages img {
+    width: 50%;
+    height: 550px;
+    /* display: inline; */
+    margin-right: -5px;
+}
+
+#featured {
+    padding: 20px;
+}
+
+#featuredHead {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 400;
+}
+
+#newItems {
+    padding: 0;
+    background-color: #fff;
+}
+
+.childLI {
+    padding-right: 10px;
+}
+
+#footer {
+    background-color: #DF5050;
+    /* height: 30px; */
+    width: 100%;
+}
+
+#footer span {
+    padding: 20px;
+    display: block;
+    color: white;
+    padding-left: 10px;;
+}
+
+/* <------------------------------------------------ dynamic ------------------------------------------------------> */
+
+
+
+.product {
+    width: 350px;
+    display: inline-block;
+    margin: 10px 0px 10px;
+    padding: 10px;
+}
+#newItems {
+    vertical-align: top;
+}
+
+.productImage {
+    align-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.productImage img {
+    width: 100%;
+    display: block;
+    margin: auto auto;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.productImage img:hover {
+    transform: scale(1.05);
+}
+
+.sellDetails {
+    width: 100%;
+    cursor: pointer;
+    border-top: 2px solid black;
+}
+
+.sellDetails h2 {
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 22px;
+}
+
+.sellDetails span {
+    display: block;
+    margin: 5px 0px;
+}
+
+.proPrice {
+    font-size: 14px;
+}
+
+.childUL {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background-color: #DF5050;
+    padding: 0;
+    display: none;
+}
+
+.childUL li {
+    color: #DF5050;
+    padding: 10px;
+    color: #fff;
+    margin: 0;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <------------------------------------------------ admin.html ----------------------------------------------------> */
+
+#adminData {
+    width: 100%;
+}
+
+#adminName {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#adminInfo {
+    width: 80%;
+    border: 2px solid red;
+    margin: auto;
+    padding: 10px 50px;
+}
+
+.tags, .inputBoxes {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tags span, .inputBoxes input, .inputBoxes select {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tags span {
+    text-align: right;
+    margin-right: 10px;
+}
+
+#productData {
+    padding: 10px;
+}
+
+#productData h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#productInfo {
+    margin-top: 50px;
+}
+
+#productInfo input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    /* padding-left: 0; */
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+#productInfo input:focus {
+    border: 2px solid #FF0000;
+    outline: none;
+}
+
+.productTag {
+    font-size: 20px;
+}
+
+#productInfo select {
+    padding: 10px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#productInfo button {
+    font-size: 16px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.6);
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#productInfo button:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
