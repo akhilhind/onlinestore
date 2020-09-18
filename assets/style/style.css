@@ -130,7 +130,7 @@ a {
 }
 
 #LogIn {
-    transformtransition: 2s all ease; 
+    transform: 2s all ease; 
     display: none;
 }
 
@@ -359,7 +359,7 @@ a {
 .sliderImages img {
     width: 50%;
     height: 550px;
-    display: inline;
+    /* display: inline; */
     margin-right: -5px;
 }
 
@@ -382,6 +382,18 @@ a {
     padding-right: 10px;
 }
 
+#footer {
+    background-color: #DF5050;
+    /* height: 30px; */
+    width: 100%;
+}
+
+#footer span {
+    padding: 20px;
+    display: block;
+    color: white;
+    padding-left: 10px;;
+}
 
 /* <------------------------------------------------ dynamic ------------------------------------------------------> */
 

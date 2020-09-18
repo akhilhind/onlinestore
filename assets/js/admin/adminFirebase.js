@@ -7,7 +7,6 @@ const adminControl = {
             firebase.database().ref('adminAcc/'+newAdmin.name+time).set(newAdmin,done);
             resolve(console.log("job done"));            
         })
-
         function done() {
             setCookie(newAdmin.name);
             var adminRef = firebase.database().ref('adminAcc/'+newAdmin.name+time2);
