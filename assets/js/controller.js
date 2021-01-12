@@ -111,7 +111,7 @@ function fetchProducts() {
 
             var price = document.createElement("span");
             price.classList = "proPrice";
-            price.innerHTML = "$" + obj.price;
+            price.innerHTML = "₹" + obj.price;
             sellDetails.appendChild(price);
 
             var discount = document.createElement("span");
@@ -417,7 +417,7 @@ function showElement(id) {
 
         var price = document.createElement("span");
         price.classList = "proPrice";
-        price.innerHTML = "$" + obj.price;
+        price.innerHTML = "₹" + obj.price;
         sellDetails.appendChild(price);
 
         var discount = document.createElement("span");
