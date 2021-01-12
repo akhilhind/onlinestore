@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/admin/adminController.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="assets/js/objSet.js"></script>
@@ -30,29 +31,61 @@
                 <li><a href="#">India</a></li>
             </ul>
         </div>
-
-
         <div id="categoryHead">
             <div class="leftHead">
-                <div id="logo">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
                 <div id="categories">
                     <ul class="category">
-                        <li id="catMen">MEN</li>
-                        <li id="catWomen">WOMEN</a></li>
-                        <li id="catKid">KIDS</a></li>
-                        <li id="catSports">SPORTS</li>
-                        <li id="catColl">COLLECTIONS</li>
+                        <li id="catMen">MEN
+                            <ul class="childUL">
+                                <li class="childLI">Clothing</li>
+                                <li class="childLI">Footwear</li>
+                                <li class="childLI">Watches</li>
+                            </ul>
+                        </li>
+                        <li id="catWomen">WOMEN
+                            <ul class="childUL">
+                                <li class="childLI">Clothing</li>
+                                <li class="childLI">Footwear</li>
+                                <li class="childLI">Watches</li>
+                            </ul>
+                        </li>
+                        <li id="catKid">KIDS
+                            <ul class="childUL">
+                                <li class="childLI">Clothing</li>
+                                <li class="childLI">Footwear</li>
+                                <li class="childLI">Watches</li>
+                            </ul>
+                        </li>
+                        <li id="catSports">SPORTS
+                            <ul class="childUL">
+                                <li class="childLI">Cricket</li>
+                                <li class="childLI">Football</li>
+                                <li class="childLI">Tennis</li>
+                            </ul>
+                        </li>
+                        <li id="catElectronics">ELECTRONICS
+                            <ul class="childUL">
+                                <li class="childLI">Laptop</li>
+                                <li class="childLI">SmartPhones</li>
+                                <li class="childLI">Tablets</li>
+                                <li class="childLI">Camera</li>
+                                <li class="childLI">Speakers</li>
+                                <li class="childLI">Desktop PCs</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
+            </div>
+            <div id="logo">
+                <i class="fas fa-shopping-cart"></i>
             </div>
             <div class="rightHead">
                 <div class="cart">
                     <ul class="rightMaster">
-                        <li id="signUpClick">LogIn | SignUp</li>
-                        <li>Account</li>
-                        <li>Cart</li>
+                        <!-- <li id="signUpClick">LogIn | SignUp</li> -->
+                        <li id="userAccount">Account</li>
+                        <li id="userCart">Cart</li>
+                        <!-- <li id="logOut">Logout</li> -->
                     </ul>
                 </div>
             </div>
@@ -63,7 +96,7 @@
                 <h2 id="infoHead">Hello <span id="adminName"></span><br> Please provide the details of the product ...</h2>
                 <form id="productInfo">
                     <span class="productTag">Product name</span>
-                    <input type="text" placeholder="e.g vaccum cleaner" id="productName">
+                    <input type="text" placeholder="e.g vaccum cleaner" id="productName" required>
                     
                     <span class="productTag">Product category</span>
                     <select name="type" id="productType">
@@ -76,16 +109,16 @@
                     </select><br>
                     
                     <span class="productTag">Product price</span>
-                    <input type="text" placeholder="e.g ₹5,000" id="productPrice">
+                    <input type="text" placeholder="e.g ₹5,000" id="productPrice" required>
                     
                     <span class="productTag">Any discount</span>
-                    <input type="number" placeholder="e.g 5%,6%" id="productDiscount">
+                    <input type="number" placeholder="e.g 5%,6%" id="productDiscount" required>
 
                     <span class="productTag" required>Product image url</span>
-                    <input type="url" placeholder="e.g http://image.com" id="productURL">
+                    <input type="url" placeholder="e.g http://image.com" id="productURL" required>
                     
-                    <button id="addNewProduct" type="button" class="submit">Save</button>
-                    <button id="reset" type="button">Add Another</button>
+                    <button id="addNewProduct" type="submit" class="submit">Save</button>
+                    <button id="reset" type="reset">Add Another</button>
                     <button id="nextPage" type="button">Home</button>                    
                 </form>
             </div>

@@ -29,6 +29,7 @@ const adminControl = {
             console.log("Inside resolve");
         }
     },
+    
     checkAdmin(user) {
         console.log("user object is",user);
         console.log("Login data - user name- ",user.email)
@@ -53,7 +54,6 @@ const adminControl = {
                         console.log("Login Successful! as admin");
                         localStorage.username = obj.name;
                         userWelcome(obj.name);
-                        
                     }
                 }
             }

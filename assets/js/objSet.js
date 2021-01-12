@@ -17,8 +17,9 @@ class newUser {
 }
 
 class newProduct {
-    constructor(name, category, price, discount, imgurl) {
+    constructor(name, proname, category, price, discount, imgurl) {
         this.name = name;
+        this.proname = proname;
         this.category = category;
         this.price = price;
         this.discount = discount;

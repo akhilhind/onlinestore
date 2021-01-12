@@ -1,4 +1,4 @@
-const userControl = {
+    const userControl = {
     addDetails(newUser) {
         var date = new Date();
         var time = date.getTime();
